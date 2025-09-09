@@ -1,4 +1,4 @@
-# Dockerized PostgreSQL
+# postgresql-template
 
 このプロジェクトは、Dockerを使用してPostgreSQLデータベースを簡単に起動するためのテンプレートを提供します。
 
