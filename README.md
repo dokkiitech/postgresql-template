@@ -11,23 +11,16 @@
 
 ### 1. 環境変数の設定
 
-まず、プロジェクトのルートにある`.env.template`ファイルをコピーして、`.env`という名前のファイルを作成します。このファイルにデータベースの接続情報などを記述します。
+まず、プロジェクトのルートにある`.env.template`ファイルをコピーして、`.env`という名前のファイルを作成します。Docker Composeは、この`.env`ファイルから設定を読み込みます。
 
 ```bash
 cp .env.template .env
 ```
 
-作成した`.env`ファイルを開き、必要に応じて内容を編集してください。
+`.env`ファイルを作成・編集した後は、**必ずコンテナを再作成**して変更を反映させる必要があります。以下のコマンドを実行してください。
 
-```
-# PostgreSQL接続情報
-POSTGRES_USER=user
-POSTGRES_PASSWORD=password
-POSTGRES_DB=mydatabase
-
-# pgAdmin接続情報
-PGADMIN_DEFAULT_EMAIL=admin@example.com
-PGADMIN_DEFAULT_PASSWORD=admin
+```bash
+docker-compose up -d --force-recreate
 ```
 
 ### 2. コンテナの起動
