@@ -76,7 +76,7 @@ docker-compose down -v
     - ダッシュボードで「Add New Server」をクリックします。
     - **General** タブで、サーバーの任意の名前を入力します (例: `local-postgres`)。
     - **Connection** タブに切り替え、以下の情報を入力します。
-      - **Host name/address**: `db` (Dockerネットワーク内のサービス名)
+      - **Host name/address**: `host.docker.internal`
       - **Port**: `5432`
       - **Maintenance database**: `.env`の`POSTGRES_DB`の値 (デフォルト: `mydatabase`)
       - **Username**: `.env`の`POSTGRES_USER`の値 (デフォルト: `user`)
