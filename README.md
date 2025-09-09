@@ -10,11 +10,12 @@
 ## セットアップ
 
 1.  `.env`ファイルを編集して、PostgreSQLのユーザー名、パスワード、データベース名をカスタマイズします。
+2.  `.env.template`をコピーして.envに名称を変更したものを使用してください
 
     ```
-    POSTGRES_USER=user
-    POSTGRES_PASSWORD=password
-    POSTGRES_DB=mydatabase
+    POSTGRES_USER=user #DBに接続するためのユーザー名
+    POSTGRES_PASSWORD=password #DBに接続するためのパスワード
+    POSTGRES_DB=mydatabase #DBの名前
     ```
 
 ## 使用方法
